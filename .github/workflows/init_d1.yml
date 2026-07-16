@@ -25,7 +25,7 @@ jobs:
           run_install: false
 
       - name: Apply database schema
-        run: pnpm dlx wrangler@4.104.0 d1 execute temp_mail --file=db/schema.sql --remote
+        run: pnpm dlx wrangler@4.104.0 d1 execute 2d4b7621-9345-46f2-90a3-5637cec29744 --file=db/schema.sql --remote
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
