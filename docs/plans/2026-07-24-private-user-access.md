@@ -17,7 +17,7 @@ Make mailbox creation and management private while retaining address-scoped cred
 
 ## Security
 
-- Use a generated, unique password because upstream stores user passwords directly in D1.
+- Use a generated, unique password because upstream stores the client-side SHA-256 password hash in D1 without a per-user salt.
 - Keep `JWT_SECRET` and `ADMIN_PASSWORDS` as encrypted Worker secrets.
 - Do not put credentials in repository files or Actions logs.
 
